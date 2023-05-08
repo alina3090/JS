@@ -1,96 +1,160 @@
+ function task1() {
 
- function task1(number) {
+     let number = prompt("task 1 enter a number: ");
 
      let html = '';
      if (isNaN(parseFloat(number)) || !isFinite(number)) {
          return alert("Числа не введены");
      } else {
 
-         while (!isNaN(parseFloat(number)) && isFinite(number)) {
-             html += number + ' ';
-             number = prompt('Введите число: ');
-         }
-
-         let i = 0;
-         let n = html.indexOf(' ');
          let num1;
          let num2;
          let flag = true;
+
          while (!isNaN(parseFloat(number)) && isFinite(number)) {
+             html += number + ' ';
              num2 = num1;
-             i = n;
-             n = html.indexOf(' ', i);
-             num1 = parseFloat(html.substring(i,n));
-             i = n;
-             n = html.indexOf(' ', i);
-             if (num2 > num1) continue;
+             num1 = number;
+             number = prompt('Введите число: ');
+             if( num2 == undefined || +num2 > +num1) continue;
              flag = false;
              break;
          }
 
+         if (flag && num2 != undefined){
+             return alert("Убывающая последовательность");
+         }
+         else if(num2 == undefined){
+             return alert("Последовательность состоит из одного числа");
+         }
+         else{
+             return alert("Не является убывающей последовательностью");
+         }
      }
  }
 
- function main(){
+ function task2() {
 
-     let number = prompt("task 1 enter a number: ");
-     task1(number);
+    let n = prompt('Введите n: ');
+    if (n>2 || n<15){
+        let html = '';
+        for (let i = 1; i <= n; i++){
+        document.write(`<hr width="${100/i}%">`);
+        }
+        if( n % 2 == 0) {
+            html = forEven(n);
+        } else html = forOdd(n);
 
-    // let n = prompt('task 2 enter n:','end');
+        function forOdd(n) {
+            let left = Math.trunc(n / 2);
+            let right = Math.trunc(n / 2);
 
+            let html = '<div><table>';
+            for (let i = 0; i < Math.trunc(n / 2) + 1; i++) {
+                let num = 1;                    // Число, которое будет в ячейках
+
+                html += '<tr>';
+                for (let j = 0; j < Math.trunc(n / 2); j++) {
+                    if (j >= left && j <= right) {
+                        html += `<td class="grey">${num}</td>`;
+                        num = num + 1;
+                    } else {
+                        html += `<td>${0}</td>`;
+                    }
+                }
+
+                for (let j = Math.trunc(n / 2); j < n; j++) {
+                    if (j >= left && j <= right) {
+                        html += `<td class="grey">${num}</td>`;
+                        num = num - 1;
+                    } else {
+                        html += `<td>${0}</td>`;
+                    }
+
+                }
+                html += '</tr>';
+
+                left = left - 1;
+                right = right + 1;
+            }
+            html += '</table></div>';
+            document.write(html);
+        }
+
+        function forEven(n) {
+            let left = Math.trunc(n / 2) - 1;
+            let right = Math.trunc(n / 2);
+
+            let html = '<div><table>';
+            for (let i = 0; i < Math.trunc(n / 2) + 1; i++) {
+                let num = 1;  // Число, которое будет в ячейках
+
+                html += '<tr>';
+                for (let j = 0; j < Math.trunc(n / 2); j++) {
+                    if (j >= left && j <= right) {
+                        html += `<td class="grey">${num}</td>`;
+                        num = num + 1;
+                    } else {
+                        html += `<td>${0}</td>`;
+                    }
+                }
+
+                for (let j = Math.trunc(n / 2); j < n; j++) {
+                    if (j >= left && j <= right) {
+                        html += `<td class="grey">${num - 1}</td>`;
+                        num = num - 1;
+                    } else {
+                        html += `<td>${0}</td>`;
+                    }
+                }
+                html += '</tr>';
+
+                left = left - 1;
+                right = right + 1;
+            }
+            html += '</table></div>';
+           document.write(html);
+        }
+        for (let i = n; i > 0; i--){
+            document.write(`<hr width="${100/i}%">`);
+        }
+
+    }
+    else {alert('Неверные данные')}
  }
- main();
 
+ function task3(text){
 
- /*function check(i) {
+     text = text.toLowerCase();
+      let count_a = 0;
+      let count_b = 0;
+      let temp = 0;
+      let str_length = text.length;
+      let i = 0;
 
-     if(isNaN(parseFloat(i)) || !isFinite()) {
-         document.write(`Неверно введено число: ${i}`);
-         return false;
-     } else
-         return true;
- }
-function  task2(n) {
-    /*Для введенного пользователем n (2 < n < 15) сформировать
-    страницу, на которую сначала выводится n горизонтальных
-    линий (шириной от 100% до 𝟏𝟎𝟎/𝒏 %), затем таблица, а затем n
-    горизонтальных линий (шириной от 𝟏𝟎𝟎/𝒏 % до 100%).
-    Структура таблицы:
-    0 0 0 0 0 0 1 0 0 0 0 0 0
-    0 0 0 0 0 1 2 1 0 0 0 0 0
-    0 0 0 0 1 2 3 2 1 0 0 0 0
-    0 0 0 1 2 3 4 3 2 1 0 0 0
-    0 0 1 2 3 4 5 4 3 2 1 0 0
-    0 1 2 3 4 5 6 5 4 3 2 1 0
-    1 2 3 4 5 6 7 6 5 4 3 2 1
+      while (i < str_length) {
+          while (i < str_length && text[i] !== ' ') {
+              if (text[i] === 'a')
+                  count_a += 1;
+              if (text[i] === 'b')
+                  count_b += 1;
+              i++;
+          }
+          if (count_b === 2 && count_a === 1) {
+              temp++;
+          }
+          i++;
+          count_a = 0;
+          count_b = 0;
+      }
+    console.log(temp);
+}
 
-   if (check(n) || Number(n)%1!==0 || n <= 2 || n >= 15) {
-         alert(`data entered incorrectly`)
-   }
-   else {                                     //сам алгоритм
+function main(){
 
-
-           for(let i = 0; i < n; i++) {
-               alert(`<hr width = "${100 / i}%"`);
-           }
-           //-----------------------------------------------------
-           document.write('<table>');
-
-           for(let i = 0; i < 7; i++){
-               document.write('<tr>');
-               for(let j = 0; j < 13; j++){
-                   if( j >= i || j <= (n - 1) - i){
-                       document.write(`<td class = "0"></td>`);
-                   }
-                   else{
-
-                   }
-               }
-           }
-
-           //------------------------------------------------------
-           for(let i = n-1; i == 0; i--) {
-               alert(`<hr width = "${100 / i}%"`);
-           }
-   }
-}*/
+//    task1();
+//    task2();
+    task3('12bAba b  bba aa a kbab oao 5a class blackboard bbabbaabba');
+    let smile;
+}
+main();
