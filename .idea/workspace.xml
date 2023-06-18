@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d798acd2-911e-4755-b016-34c41fd73608" name="Changes" comment="1.1">
-      <change beforePath="$PROJECT_DIR$/JS lab1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS lab1/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS lab3/Samost/Task1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS lab3/Samost/Task1/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS lab3/Samost/Task2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS lab3/Samost/Task2/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS lab3/Samost/Task2/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_04_2023_22_03_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_04_2023_22_03__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -29,19 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/part6/HTML/JS/JS lab1&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/part6/HTML/JS",
+    "list.type.of.created.stylesheet": "CSS",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\part6\HTML\JS\JS lab1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\part6\HTML\JS\JS lab3\Samost" />
+      <recent name="D:\part6\HTML\JS\JS lab3\Task1" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -66,6 +80,7 @@
       <workItem from="1681537174499" duration="2016000" />
       <workItem from="1681544294920" duration="2575000" />
       <workItem from="1681548737163" duration="1204000" />
+      <workItem from="1687062687795" duration="5685000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1681041534379</created>
