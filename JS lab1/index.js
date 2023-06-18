@@ -36,7 +36,7 @@
  function task2() {
 
     let n = prompt('Введите n: ');
-    if (n>2 || n<15){
+    if (n > 2 || n < 15){
         let html = '';
         for (let i = 1; i <= n; i++){
         document.write(`<hr width="${100/i}%">`);
@@ -153,8 +153,8 @@
 function main(){
 
 //    task1();
-//    task2();
-    task3('12bAba b  bba aa a kbab oao 5a class blackboard bbabbaabba');
+//   task2();
+//    task3('12bAba b  bba aa a kbab oao 5a class blackboard bbabbaabba');
     let smile;
 }
 main();

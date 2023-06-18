@@ -1,0 +1,174 @@
+<html >
+<head>
+    <meta charset="utf-8" />
+    <title>таблица</title>
+</head>
+<body>
+<ul>
+    <li ><a href="index.html"><h3>Главная страница</h3></a></li>
+    <li><a href="list.html"><h3>Список помад</h3></a></li>
+</ul>
+<p>
+<h2>Изменить таблицу</h2>
+<details>
+        <summary> График </summary>
+        <form>
+                <li><input type="radio" name="r" value="0">Объём<br></li>
+                <li><input type="radio" name="r" value="0">Срок годности<br></li>
+                <li><input type="radio" name="r" value="0">Цена<br></li>
+                <li><input type="radio" name="r" value="0">Год создания<br></li>
+        <input type=button value="Построить">
+        </form>
+        </details>
+<details>
+        <summary> Фильтр </summary>
+        <form>
+                <p>
+                        <label for=name>
+                                Название
+                        </label>
+                        <br>
+                        <input type="text" id="name">
+                </p>
+                <p>
+                        <label>
+                                Тип<br>
+                                <input type="text" id="type">
+                        </label>
+                </p>
+                <p>
+                        <label>
+                                Страна<br>
+                                <input type="text" id="city">
+                        </label>
+                </p>
+                <p>
+                        <label>
+                               Объём<br>
+                                <input type="text" id="V">
+                        </label>
+                </p>
+                <p>
+                        <label>
+                                Год<br>
+                                <input type="text" id="year">
+                        </label>
+                </p>
+                <p>
+                        <label>
+                                Срок годности<br>
+                                <input type="text" id="expiration_date">
+                        </label>
+                </p>
+                <p>
+                        <label>
+                                Цена<br>
+                                <input type="text" id="cost">
+                        </label>
+                </p>
+        </form>
+
+</details>
+<details>
+        <summary> Сортировка </summary>
+        <form>
+                <p>
+                        Первый уровень:
+                        <select name="sortFirst">
+                                <option value="0">Нет</option>
+                                <option value="4">Объём</option>
+                                <option value="5">Год</option>
+                                <option value="6">Срок годности</option>
+                                <option value="7">Цена</option>
+
+                        </select>
+                </p>
+                <p>
+                        Второй уровень:
+                        <select name="sortSecond">
+                                <option value="0">Нет</option>
+                                <option value="4">Объём</option>
+                                <option value="5">Год</option>
+                                <option value="6">Срок годности</option>
+                                <option value="7">Цена</option>
+                        </select>
+                </p>
+                <input type=button value="Сортировать" checked onclick="howSortTable(this.form.sortFirst.value,
+                                                                                     this.form.sortSecond.value)">
+        </form>
+</details>
+</p>
+<p>
+   <h3>Ниже приведена таблица с самыми популярными помадами прошлых годов и веков </h3>
+</p>
+<table id="table">
+        <thead>
+        <th>Название</th><th>Тип</th><th>Страна</th><th>Объем</th><th>Год</th><th>Срок годности(мес.)</th><th>Цена</th>
+        </thead>
+        <tbody>
+        <tr><td>NARS</td><td>Матовая</td><td>ОАЭ</td><td>400</td><td>2010</td><td>12</td><td>2000</td></tr>
+        <tr><td>LIS Lisboa</td><td>Матовая</td><td>Польша</td><td>500</td><td>9</td><td>8</td><td>120</td></tr>
+        <tr><td>Uslu Airlines </td><td>Блеск</td><td>Япония</td><td>170</td><td>2012</td><td>6</td><td>650</td></tr>
+        <tr><td>WOR</td><td>Гигиеничка</td><td>КНР</td><td>200</td><td>2013</td><td>6</td><td>1200</td></tr>
+        <tr><td>Lime Crime</td><td>Гигиеничка</td><td>США</td><td>200</td><td>1963</td><td>6</td><td>400</td></tr>
+        <tr><td> Inglot</td><td>Гигиеничка</td><td>Саудовская Аравия</td><td>100</td><td>2012</td><td>1</td><td>120</td></tr>
+        <tr><td>Le Rouge Crayon de Couleur,</td><td>Жидкий карандаш</td><td>КНР</td><td>200</td><td>2009</td><td>5</td><td>900</td></tr>
+        <tr><td>5 rouge</td><td>Водостойкий карандаш</td><td>КНР</td><td>120</td><td>2017</td><td>3</td><td>870 </td></tr>
+        <tr><td>Сhanel</td><td>Жидкий карандаш</td><td>Южная Корея</td><td>100</td><td>2017</td><td>25</td><td>2300</td>
+        <tr><td>Always On Liquid Lipstick</td><td>Классическая помада</td><td>Канада</td><td>300</td><td>1976</td><td>24</td><td>2000</td></tr>
+        <tr><td>Driver's Seat</td><td>Блеск</td><td>Россия</td><td>130</td><td>1967</td><td>11</td><td>2000</td></tr>
+        <tr><td>Smashbox</td><td>Блеск</td><td>США</td><td>120</td><td>1974</td><td>5</td><td>1 436</td></tr>
+        <tr><td>Liquid Lip Velvet 57 Black Cherry</td><td>Кремовая помада</td><td>Тайвань</td><td>140</td><td>2004</td><td>5</td><td>1000</td></tr>
+        <tr><td>Liquid Lip Velvet 57 Burberry</td><td>Кремовая помада</td><td>КНР</td><td>120</td><td>2008</td><td>4</td><td>1000</td></tr>
+        <tr><td>Pure Color Envy Liquid Lip Potion</td><td>Жидкая помада</td><td>Гонконг</td><td>400</td><td>2009</td><td>4</td><td>840</td></tr>
+        <tr><td>130 Bitter Sweet</td><td>Стойкая помада</td><td>КНР</td><td>300</td><td>1994</td><td>4</td><td>1200</td></tr>
+        <tr><td>Еstee Lauder</td><td>Матовая</td><td>Россия</td><td>200</td><td>2018</td><td>4</td><td>88</td></tr>
+        <tr><td>Vice Lipstick Comfort Matte</td><td>Матовая</td><td>Вьетнам</td><td>150</td><td>2018</td><td>4</td><td>430</td></tr>
+        <tr><td>Blackmail</td><td>Блеск</td><td>США</td><td>120</td><td>1969</td><td>4</td><td>100</td></tr>
+        <tr><td>Urban Decay</td><td>Матовая</td><td>Малайзия</td><td>130</td><td>1998</td><td>4</td><td>800</td></tr>
+        <tr><td>Audacious Lipstick Jeanne</td><td>Классическая помада</td><td>КНР</td><td>300</td><td>2009</td><td>24</td><td>600</td></tr>
+        <tr><td>Pretty Stix Boho</td><td>Стойкая помада</td><td>США</td><td>200</td><td>1931</td><td>4</td><td>100</td></tr>
+        <tr><td>Ciate</td><td>Водостойкая</td><td>КНР</td><td>100</td><td>2010</td><td>14</td><td>100</td></tr>
+        <tr><td>Vice Liquid Lipstick Menace</td><td>Матовая</td><td>КНР</td><td>210</td><td>2011</td><td>10</td><td>200</td></tr>
+        <tr><td>Urban Decay</td><td>Гигиеничка</td><td>Иран</td><td>100</td><td>2003</td><td>12</td><td>60</td></tr>
+        <tr><td>Retro Matte Liquid Lipcolour</td><td>Блеск</td><td>США</td><td>250</td><td>2015</td><td>4</td><td>85</td></tr>
+        <tr><td>Personal Statement</td><td>Классическая помада</td><td>США</td><td>120</td><td>2009</td><td>20</td><td>90</td></tr>
+        <tr><td>M.A.C</td><td>Матовая</td><td>Малайзия</td><td>300</td><td>1995</td><td>4</td><td>2000</td></tr>
+        <tr><td> Liquid Lip Velvet</td><td>Матовая</td><td>КНР</td><td>350</td><td>1999</td><td>4</td><td>800</td></tr>
+        <tr><td> 33 Magent</td><td>Классическая помада</td><td>Казахстан</td><td>200</td><td>1987</td><td>4</td><td>100</td></tr>
+        <tr><td>Burberry</td><td>Классичесская помада</td><td>Гонконг</td><td>100</td><td>2003</td><td>8</td><td>80</td></tr>
+        <tr><td>Cosmetics Wickedly Divine Liquid Lipstick</td><td>Нюдовая</td><td>КНР</td><td>200</td><td>1991</td><td>12</td><td>1000</td></tr>
+        <tr><td>Dragons Blood</td><td>Кремовая</td><td>Кувейт</td><td>100</td><td>2010</td><td>12</td><td>700</td></tr>
+        <tr><td> LA Splash </td><td>Кремовая</td><td>КНР</td><td>120</td><td>1992</td><td>5</td><td>900</td></tr>
+        <tr><td>Paint Wash Liquid Lip Colour</td><td>Жидкий карандаш</td><td>КНР</td><td>100</td><td>1997</td><td>12</td><td>200</td></tr>
+        <tr><td>Laura Mercier</td><td>Жидкий карандаш</td><td>Украина</td><td>120</td><td>1973</td><td>38</td><td>9000</td></tr>
+        <tr><td>Rouge Double Intensité</td><td>Жидкий карандаш</td><td>КНР</td><td>200</td><td>1996</td><td>3</td><td>60</td></tr>
+        <tr><td>Сhanel</td><td>Жидкий блеск</td><td>Казахстан</td><td>100</td><td>2015</td><td>11</td><td>180</td></tr>
+        <tr><td>Kat Von D Beauty</td><td>Жидкий блеск</td><td>ОАЭ</td><td>200</td><td>2014</td><td>12</td><td>188</td></tr>
+        <tr><td>Lip Magnet</td><td>Нюдовая</td><td>Канада</td><td>230</td><td>1971</td><td>10</td><td>150</td></tr>
+        <tr><td>Giorgio Armani</td><td>Нюдовая</td><td>Тайвань</td><td>100</td><td>1997</td><td>8</td><td>120</td></tr>
+        <tr><td>JLiquid Lip Velvet</td><td>Нюдовая</td><td>ОАЭ</td><td>100</td><td>2010</td><td>6</td><td>770</td></tr>
+        <tr><td>Matte Shaker</td><td>Нюдовая</td><td>Узбекистан</td><td>120</td><td>1985</td><td>9</td><td>400</td></tr>
+        <tr><td>Lancôme</td><td>Нюдовая</td><td>Россия</td><td>150</td><td>2016</td><td>374</td><td>4</td></tr>
+        <tr><td>Soft Matte Lip Cream</td><td>Нюдовая</td><td>Гонконг</td><td>100</td><td>1992</td><td>3</td><td>700</td></tr>
+        <tr><td>Selection Matmoiselle</td><td>Матовая</td><td>Кувейт</td><td>200</td><td>1996</td><td>3</td><td>100</td></tr>
+        <tr><td>Л`Этуаль </td><td>Матовая</td><td> Казахстан</td><td>450</td><td>1983</td><td>15</td><td>50</td></tr>
+        <tr><td>Grand Rouge L'elixir</td><td>Матовая</td><td> США</td><td>450</td><td>1977</td><td>24</td><td>190</td></tr>
+        <tr><td>Yves Rocher</td><td>Матовая</td><td> Россия</td><td>400</td><td>1985</td><td>30</td><td>190</td></tr>
+        <tr><td>Joli Rouge Brillant Lipstick</td><td>Матовая</td><td> Латвия</td><td>200</td><td>1987</td><td>12</td><td>390</td></tr>
+        <tr><td>23 Rose Petal</td><td>Карандаш</td><td> Германия</td><td>250</td><td>1969</td><td>10</td><td>310</td></tr>
+        <tr><td>Clarins</td><td>Жидкий карандаш</td><td> США</td><td>260</td><td>1968</td><td>16</td><td>450</td></tr>
+        <tr><td>Matte Me, оттенок Petal</td><td>Жидкий карандаш</td><td> Гонконг</td><td>100</td><td>1990</td><td>24</td><td>700</td></tr>
+        <tr><td>Sleek</td><td>Жидкий карандаш</td><td> США</td><td>250</td><td>2008</td><td>36</td><td>540</td></tr>
+        <tr><td>Rouge Coco</td><td>Жидкий карандаш</td><td> ОАЭ</td><td>240</td><td>2008</td><td>9</td><td>680</td></tr>
+        <tr><td>Avant Garde</td><td>Жидкий карандаш</td><td> Словения</td><td>100</td><td>1976</td><td>20</td><td>3600</td></tr>
+        <tr><td>Chanel</td><td> Жидкий карандаш</td><td>Испания</td><td>100</td><td>1974</td><td>22</td><td>2200</td></tr>
+        <tr><td>La Petite Robe Noire</td><td>Классическая помада</td><td> КНР</td><td>100</td><td>2000</td><td>24</td><td>1700</td></tr>
+        <tr><td> Red Bow Tie 022</td><td>Классическая</td><td> Канада</td><td>230</td><td>1976</td><td>26</td><td>7200</td></tr>
+        <tr><td>Guerlain </td><td>Блеск</td><td> ОАЭ</td><td>300</td><td>2000</td><td>9</td><td>540</td></tr>
+        <tr><td>Color Rich #335</td><td>Блеск</td><td> Россия</td><td>420</td><td>2015</td><td>8</td><td>185</td></tr>
+        </tbody>
+</table>
+<script src="./js/tableSort.js"></script>
+</body>
+</html>
