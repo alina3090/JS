@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d798acd2-911e-4755-b016-34c41fd73608" name="Changes" comment="the 3 lab is complete">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d798acd2-911e-4755-b016-34c41fd73608" name="Changes" comment="ver" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +73,7 @@
       <workItem from="1681548737163" duration="1204000" />
       <workItem from="1687062687795" duration="6108000" />
       <workItem from="1687315128477" duration="13000" />
+      <workItem from="1687315145472" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1681041534379</created>
@@ -118,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687073355157</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ver">
+      <created>1687315164007</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687315164007</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +145,7 @@
     <MESSAGE value="123" />
     <MESSAGE value="1.1" />
     <MESSAGE value="the 3 lab is complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="the 3 lab is complete" />
+    <MESSAGE value="ver" />
+    <option name="LAST_COMMIT_MESSAGE" value="ver" />
   </component>
 </project>
